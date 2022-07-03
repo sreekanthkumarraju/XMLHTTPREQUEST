@@ -203,12 +203,16 @@ function newCountrySelection(event) {
   displayCountryInfo(event.target.value);
 }
 
+
+
  fetch("https://restcountries.com/v2/all")
  
  .then(function(res)
+ 
  {
+   
    console.log(res);
-  return res.json();
+   return res.json();
 
 })
 
@@ -233,7 +237,8 @@ function initialize(countriesData)
 
  
   for(let i=0;i<countries.length;i++)
-    {
+   
+   {
         Display(countries[i])
       
     }
@@ -248,9 +253,12 @@ function Display(country)
    
     
       let img= document.createElement('img')
+    
       img.src=country.flag
+     
       document.querySelector('#image').appendChild(img)
-       console.log(country.flag)
+       
+      console.log(country.flag)
     
 
    
