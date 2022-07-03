@@ -206,7 +206,6 @@ function newCountrySelection(event) {
 
 
  fetch("https://restcountries.com/v2/all")
- 
  .then(function(res)
  
  {
@@ -219,13 +218,16 @@ function newCountrySelection(event) {
  .then(function(data)
  {
         console.log(data);
-       initialize(data);
+     
+        initialize(data);
  })
  
 .catch(function(err)
 {
+  
   console.log("Error:", err);
- });
+
+});
 
 
 
@@ -233,9 +235,9 @@ function initialize(countriesData)
 {
 
   console.log(countriesData)
+  
   countries = countriesData;
 
- 
   for(let i=0;i<countries.length;i++)
    
    {
