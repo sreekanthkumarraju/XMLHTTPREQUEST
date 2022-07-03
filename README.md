@@ -148,3 +148,112 @@ OUTPUT:
 ![opera_glfqDb1i2j](https://user-images.githubusercontent.com/95994543/177029759-32b8cf5e-f188-40c0-8878-26cf86a27640.png)
 ![opera_FkXO9qZVu4](https://user-images.githubusercontent.com/95994543/177029761-1463094a-9455-4a9f-b5c2-8bfb28015299.png)
 ![opera_P4fIvPtTv9](https://user-images.githubusercontent.com/95994543/177029764-9806f3ce-1856-4130-810f-54d3afd9771a.png)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+3. use rest countries URL  https://restcountries.com/v2/all  display all countries flags
+--------------------------------------------------------------------------------------------
+
+
+
+countryflag .html
+ ----------------
+ 
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+       
+        <div id="countries" class="col-6">
+            
+                <div id="images">
+                
+                    <div id="image" ></div>
+                </div> 
+               
+        </div>
+           
+      </div>
+      
+      <script src="countryflag.js"></script>
+</body>
+</html>
+ 
+ 
+ countryflag .js
+ --------------
+ 
+ // Global Variables
+const countriesList = document.getElementById("countries");
+let countries; // will contain "fetched" data
+
+// Event Listeners
+ countriesList.addEventListener("change", event => displayCountryInfo(event.target.value));
+
+countriesList.addEventListener("change", newCountrySelection);
+
+function newCountrySelection(event) {
+  displayCountryInfo(event.target.value);
+}
+
+ fetch("https://restcountries.com/v2/all")
+ 
+ .then(function(res)
+ {
+   console.log(res);
+  return res.json();
+
+})
+
+ .then(function(data)
+ {
+        console.log(data);
+       initialize(data);
+ })
+ 
+.catch(function(err)
+{
+  console.log("Error:", err);
+ });
+
+
+
+function initialize(countriesData) 
+{
+
+  console.log(countriesData)
+  countries = countriesData;
+
+ 
+  for(let i=0;i<countries.length;i++)
+    {
+        Display(countries[i])
+      
+    }
+
+}
+
+
+
+
+function Display(country)
+  {
+   
+    
+      let img= document.createElement('img')
+      img.src=country.flag
+      document.querySelector('#image').appendChild(img)
+       console.log(country.flag)
+    
+
+   
+  }
+ 
+
