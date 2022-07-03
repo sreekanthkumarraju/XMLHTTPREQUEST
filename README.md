@@ -240,6 +240,9 @@ function newCountrySelection(event) {
 
 
 
+
+//initialize function
+
 function initialize(countriesData) 
 
 {
@@ -260,6 +263,7 @@ function initialize(countriesData)
 
 
 
+//display data
 
 function Display(country)
   {
