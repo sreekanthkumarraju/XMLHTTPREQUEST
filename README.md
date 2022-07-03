@@ -257,3 +257,11 @@ function Display(country)
   }
  
 
+  Result :
+  
+  
+  
+![PJSVZbnQB3](https://user-images.githubusercontent.com/95994543/177030578-9049c3b3-b97f-47f1-98d9-43c76469b186.png)
+![opera_syLrdJllyR](https://user-images.githubusercontent.com/95994543/177030582-e59cbadc-c180-432e-b277-35fae15001a4.png)
+![opera_BmiHJr8qs3](https://user-images.githubusercontent.com/95994543/177030587-cb00ebc6-59bc-4ba8-9fdc-fd0ea81ab647.png)
+![opera_kVAM6A6wpt](https://user-images.githubusercontent.com/95994543/177030595-0bda1a28-f1e7-4e08-b125-fadf85e4d6b3.png)
