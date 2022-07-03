@@ -64,50 +64,57 @@
 countrylist .js
 ----------------
 // Global Variables
-const countriesList = document.getElementById("countries");
-let countries; // will contain "fetched" data
 
-// Event Listeners
- countriesList.addEventListener("change", event => displayCountryInfo(event.target.value));
+   const countriesList = document.getElementById("countries");
+   let countries; // will contain "fetched" data
 
-countriesList.addEventListener("change", newCountrySelection);
+  // Event Listeners
+   countriesList.addEventListener("change", event => displayCountryInfo(event.target.value));
 
-function newCountrySelection(event) {
-  displayCountryInfo(event.target.value);
-}
+   countriesList.addEventListener("change", newCountrySelection);
 
-// fetching data
- fetch("https://restcountries.com/v2/all")
- .then(function(res){
-   console.log(res);
-  return res.json();
-})
- .then(function(data){
-        console.log(data);
-  initialize(data);
- })
-.catch(function(err){
-  console.log("Error:", err);
- });
+    function newCountrySelection(event) {
+        displayCountryInfo(event.target.value);
+     }
+
+ 
+   // fetching data
+    
+    fetch("https://restcountries.com/v2/all")
+         .then(function(res){
+            console.log(res);
+         return res.json();
+    })
+ 
+    .then(function(data){
+           console.log(data);
+           initialize(data);
+    })
+
+   .catch(function(err){
+      console.log("Error:", err);
+    });
 
 
 
-function initialize(countriesData) {
-  console.log(countriesData)
-  countries = countriesData;
-  for(let i=0;i<countries.length;i++)
-    {
-        Display(countries[i])
+  function initialize(countriesData)
+   {
+      console.log(countriesData)
+      countries = countriesData;
+      for(let i=0;i<countries.length;i++)
+        {
+             Display(countries[i])
       
-    }
+       }
 
-}
-
+   }
+   
 
 
 //displaying data
-function Display(country)
-  {
+  
+  function Display(country)
+    {
    
     let table1=document.querySelector(".table");
     
