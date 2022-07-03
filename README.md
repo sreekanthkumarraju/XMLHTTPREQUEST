@@ -98,12 +98,17 @@ countrylist .js
 
 
   function initialize(countriesData)
-   {
+     {
+      
       console.log(countriesData)
+      
       countries = countriesData;
+      
       for(let i=0;i<countries.length;i++)
-        {
-             Display(countries[i])
+       
+       {
+            
+            Display(countries[i])
       
        }
 
